@@ -2,33 +2,45 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <script src="jquery.js"></script>
     <script src="client.js"></script>
     <title>Salary Calculator</title>
   </head>
   <body>
-    <h1>Salary Calculator</h1>
+
     <div class="container">
+      <h1>Salary Calculator</h1>
       <form>
         <h3>Employee</h3>
-        <label for="name">First Name</label>
-        <input type="text" name="firstName" value=""/>
-        <br>
-        <label for="type">Last Name</label>
-        <input type="text" name="lastName" value=""/>
-        <br>
-        <label for="age">ID Number</label>
-        <input type="text" name="idNumber" value=""/>
-        <br>
-        <label for="age">Job Title</label>
-        <input type="text" name="jobTitle" value=""/>
-        <br>
-        <label for="age">Annual Salary</label>
-        <input type="text" name="annualSalary" value=""/>
-        <button type="button" name="button" class="submit">Submit</button>
+        <div class="form-row">
+          <div class="form-group form-group col-md-6">
+            <label for="firstName">First Name</label>
+            <input class="form-control" name="firstName" placeholder="First Name">
+          </div>
+          <div class="form-group form-group col-md-6">
+            <label for="lastName">Last Name</label>
+            <input class="form-control" name="lastName" placeholder="Last Name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="idNumber">ID Number</label>
+            <input class="form-control" name="idNumber" placeholder="ID #">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="jobTitle">Job Title</label>
+            <input class="form-control" name="jobTitle" placeholder="Job Title">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="annualSalary">Annual Salary</label>
+            <input class="form-control" name="annualSalary" placeholder="Annual Salary">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary submit float-right">Submit</button>
       </form>
-    </div>
-    <table>
+    <table class="table table-sm table-striped">
       <thead>
         <tr>
           <th>First Name</th>
@@ -36,8 +48,15 @@
           <th>ID Number</th>
           <th>Job Title</th>
           <th>Annual Salary</th>
+          <th>Monthly Salary</th>
+          <th></th>
         </tr>
+        <tbody id="tableBody">
+
+        </tbody>
       </thead>
-    </table>
+
+      </table>
+    </div>
   </body>
 </html>
